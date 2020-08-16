@@ -29,13 +29,10 @@ aside {
   background-color: #f12e68;
   width: 100%;
   text-align: center;
-  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1rem 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  opacity: .95;
 }
 
 .player__container {
