@@ -26,25 +26,40 @@ body {
 
 aside {
   position: relative;
-  background-color: #fff;
+  background-color: #f12e68;
   width: 100%;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: .95;
 }
 
 .player__container {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   justify-content: center;
   background-color: #151515;
   width: 100%;
   max-width: 600px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  height: 100vh;
+}
+
+.player__head {
+  position: sticky;
+  top: 0;
+  background-color: #151515;
 }
 
 .player__header {
-  background-color: #f12e68;
   text-align: center;
+  background-color: #f12e68;
+  margin: 0;
+  padding: 1rem 0;
 }
 
 .player__equalizer {
@@ -58,11 +73,9 @@ aside {
 }
 
 .player__playlist {
-  border: 1px solid #f12e68;
-  border-left: none;
-  border-right: none;
-  min-height: 300px;
-  background-color: #151515;
+  flex-grow: 1;
+  background-color: #2f2f2f;
+  overflow: auto;
 }
 
 .player__playlist__list {
