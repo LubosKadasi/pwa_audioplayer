@@ -26,6 +26,9 @@ body {
 
 aside {
   position: relative;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
 }
 
 .player__container {

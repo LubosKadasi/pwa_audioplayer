@@ -15,7 +15,7 @@ $c-primary: #f12e68;
 }
 
 html{
-    min-height: 100%;
+    min-height: 100%; 
     display: flex;
     align-items: stretch;
     justify-content: stretch;
@@ -35,6 +35,9 @@ body{
 }
 aside{
     position: relative;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
 }
 
 //Player
