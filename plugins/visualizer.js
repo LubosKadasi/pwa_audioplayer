@@ -388,21 +388,3 @@ AUDIO.VISUALIZER = (function () {
     };
 })();
 
-document.addEventListener('DOMContentLoaded', function () {
-    'use strict';
-
-    AUDIO.VISUALIZER.getInstance({
-        autoplay: true,
-        loop: true,
-        audio: 'myAudio',
-        canvas: 'myCanvas',
-        style: 'lounge',
-        barWidth: 2,
-        barHeight: 2,
-        barSpacing: 7,
-        barColor: '#cafdff',
-        shadowBlur: 20,
-        shadowColor: '#ffffff',
-        font: ['12px', 'Helvetica']
-    });
-}, false);

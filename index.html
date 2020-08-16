@@ -19,33 +19,38 @@
     
     <main class="player__container">
         <section class="player__header"><h1>Player Header</h1></section>
+        <section class="player__controls">
+            <audio controls id="myAudio" src="audio/file.mp3" data-author="insert/author/name" data-title="insert/audio/name"></audio>
+        </section>
         <section class="player__equalizer">
             <div>
                 <canvas id="myCanvas" width="600" height="400"></canvas>
             </div>
-        </section>
-        <section class="player__controls">
-            <audio controls id="myAudio" src="audio/file.mp3" data-author="insert/author/name" data-title="insert/audio/name"></audio>
         </section>
         <section class="player__playlist">playlist</section>
     </main>
 
     <script>
 
-        AUDIO.VISUALIZER.getInstance({
-            autoplay: false,
-            loop: true,
-            audio: 'myAudio',
-            canvas: 'myCanvas',
-            style: 'lounge',
-            barWidth: 2,
-            barHeight: 2,
-            barSpacing: 7,
-            barColor: '#f12e68',
-            shadowBlur: 20,
-            shadowColor: '#f12e68',
-            font: ['12px', 'Helvetica']
-        });
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            'use strict';
+            
+            AUDIO.VISUALIZER.getInstance({
+                autoplay: false,
+                loop: true,
+                audio: 'myAudio',
+                canvas: 'myCanvas',
+                style: 'lounge',
+                barWidth: 2,
+                barHeight: 2,
+                barSpacing: 7,
+                barColor: '#f12e68',
+                shadowBlur: 20,
+                shadowColor: '#f12e68',
+                font: ['12px', 'Helvetica']
+            });
+        }, false);
 
     </script>
 
