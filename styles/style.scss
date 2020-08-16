@@ -33,8 +33,16 @@ body{
 //Player
 .player{
     &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         background-color: $c-bgplayer;
         max-width: 600px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
+}
+
+#myCanvas{
+    max-width: 100%;
 }

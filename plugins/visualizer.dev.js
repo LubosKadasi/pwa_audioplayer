@@ -322,14 +322,14 @@ AUDIO.VISUALIZER = function () {
     var cx = this.canvas.width / 2;
     var cy = this.canvas.height / 2;
     var radius = 140;
-    var maxBarNum = Math.floor(radius * 2 * Math.PI / (this.barWidth + this.barSpacing));
+    var maxBarNum = Math.floor(radius * 3 * Math.PI / (this.barWidth + this.barSpacing));
     var slicedPercent = Math.floor(maxBarNum * 25 / 100);
     var barNum = maxBarNum - slicedPercent;
     var freqJump = Math.floor(this.frequencyData.length / maxBarNum);
 
     for (var i = 0; i < barNum; i++) {
       var amplitude = this.frequencyData[i * freqJump];
-      var alfa = i * 2 * Math.PI / maxBarNum;
+      var alfa = i * 2.656 * Math.PI / maxBarNum;
       var beta = (3 * 45 - this.barWidth) * Math.PI / 180;
       var x = 0;
       var y = radius - (amplitude / 12 - this.barHeight);
@@ -408,11 +408,11 @@ document.addEventListener('DOMContentLoaded', function () {
     audio: 'myAudio',
     canvas: 'myCanvas',
     style: 'lounge',
-    barWidth: 2,
-    barHeight: 2,
-    barSpacing: 7,
+    barWidth: 1,
+    barHeight: 1,
+    barSpacing: 5,
     barColor: '#f12e68',
-    shadowBlur: 20,
+    shadowBlur: 5,
     shadowColor: '#f12e68',
     font: ['14px', 'Helvetica']
   });

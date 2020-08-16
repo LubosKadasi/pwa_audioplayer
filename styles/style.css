@@ -21,7 +21,15 @@ body {
 }
 
 .player__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #151515;
   max-width: 600px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#myCanvas {
+  max-width: 100%;
 }
