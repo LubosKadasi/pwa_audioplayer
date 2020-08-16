@@ -7,14 +7,40 @@
 
     <link rel="stylesheet" href="styles/style.css">
 
+    <!--<  script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <script src="plugins/visualizer.js"></script>
+
+    <style>
+
+    </style>
+
 </head>
 <body>
-    <h1>Play</h1>
+    
     <main class="player__container">
-        <section class="player__header">Header</section>
-        <section class="player__equalizer">Equalizer</section>
-        <section class="player__controls">controls</section>
+        <section class="player__header"><h1>Player Header</h1></section>
+        <section class="player__equalizer">
+            <div>
+                <canvas id="myCanvas" width="800" height="400"></canvas>
+            </div>
+        </section>
+        <section class="player__controls">
+            <audio controls id="myAudio" src="audio/file.mp3" data-author="insert/author/name" data-title="insert/audio/name"></audio>
+        </section>
         <section class="player__playlist">playlist</section>
     </main>
+
+    <script>
+
+        AUDIO.VISUALIZER.getInstance({
+            audio: 'myAudio',
+            canvas: 'myCanvas',
+        });
+
+    </script>
+
+
+    
+
 </body>
 </html>
