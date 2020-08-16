@@ -14,20 +14,27 @@ $c-primary: #f12e68;
     box-sizing: border-box;
 }
 
-html,
-body{
-    padding: 0;
-    margin: 0;
-    min-height: 100vh;
+html{
+    min-height: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
 }
 
 body{
+    width: 100%;
+    padding: 0;
+    margin: 0;
     font-family: sans-serif;
     background-color: $c-bg;
     color: $c-text;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+aside{
+    position: relative;
 }
 
 //Player
@@ -35,14 +42,37 @@ body{
     &__container{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         justify-content: center;
         background-color: $c-bgplayer;
+        width: 100%;
         max-width: 600px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
-}
-
-#myCanvas{
-    max-width: 100%;
+    &__header{
+        background-color: $c-primary;
+        text-align: center;
+    }
+    &__equalizer{
+        min-height: 200px;
+        background-image: radial-gradient($c-primary, $c-bg);
+    }
+    &__controls{
+        text-align: center;
+        padding: 1rem;
+    }
+    &__playlist{
+        border: 1px solid $c-primary;
+        border-left: none;
+        border-right: none;
+        min-height: 300px;
+        background-color: $c-bgplayer;
+        &__list{
+            margin: 0;
+            padding: 1rem 2rem;
+            &__item{
+                padding: 1rem 0;
+            }
+        }
+    }
 }

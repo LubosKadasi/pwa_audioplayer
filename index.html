@@ -4,48 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PWA Audio Player</title>
-
-    <script type="module" src="serviceWorker1/pwabuilder-sw-register.js"></script>
-    <script src="serviceWorker1/pwabuilder-sw.js"></script>
     
-    <script src="manup.js"></script>
-    <link rel="manifest" href="maninfest.json">
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
 
     <link rel="stylesheet" href="styles/style.css">
-
+    
     <!--<  script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
-
+    
     <style>
-
+        
     </style>
 
 </head>
 <body>
     
     <main class="player__container">
-        <section class="player__header"><h1>Player</h1></section>
+        <section class="player__header"><h1>PWA Player</h1></section>
         <section class="player__equalizer">
-            <div>
-                <canvas id="myCanvas" width="400" height="400"></canvas>
-            </div>
         </section>
         <section class="player__controls">
             <audio controls id="myAudio" src="audio/file.mp3" data-author="insert/author/name" data-title="insert/audio/name"></audio>
         </section>
-        <section class="player__playlist"></section>
+        <section class="player__playlist">
+            <ol class="player__playlist__list">
+                <li class="player__playlist__list__item">item - list of audio files</li>
+                <li class="player__playlist__list__item">item - list of audio files</li>
+                <li class="player__playlist__list__item">item - list of audio files</li>
+                <li class="player__playlist__list__item">item - list of audio files</li>
+                <li class="player__playlist__list__item">item - list of audio files</li>
+                <li class="player__playlist__list__item">item - list of audio files</li>
+                <li class="player__playlist__list__item">item - list of audio files</li>
+            </ol>
+        </section>
     </main>
 
-    <script>
-
-        AUDIO.VISUALIZER.getInstance({
-            audio: 'myAudio',
-            canvas: 'myCanvas',
-        });
-
-    </script>
-
+    <aside>
+        <pwa-install>Install</pwa-install>
+    </aside>
+    
+    <!-- PWA install script -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall@latest/dist/pwa-install.min.js"></script>
 
     
-
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/service-worker.js");
+        }
+    </script>
+    
+    
 </body>
 </html>
